@@ -9,7 +9,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
-[link to my website]([git@github.com:pinargulum/pinargulum.github.io.git]
+[link to my website](git@github.com:pinargulum/pinargulum.github.io.git)
 Images
 
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them here, so your project loads faster.
