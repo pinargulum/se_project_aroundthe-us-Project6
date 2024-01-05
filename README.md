@@ -11,7 +11,7 @@ githup
 
 [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
-[link to my website]()
+[link to my website](git@github.com:pinargulum/pinargulum.github.io.git)
 
 Images
 
