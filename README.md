@@ -7,7 +7,7 @@ Intro
 This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
 githup
 
-[Link to my Github](git@github.com:pinargulum/se_project_aroundthe-us-Project6.git)
+[Link to my Github](https://github.com/pinargulum/se_project_aroundthe-us-Project6.git)
 
 [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
