@@ -8,6 +8,7 @@ This project is made so all the elements are displayed correctly on popular scre
 [Link to my Github](https://github.com/pinargulum/se_project_aroundthe-us-Project6.git)
 
 [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
+[Link to the project on my Website](https://pinargulum.github.io/se_project_aroundthe-us-Project6)
 
 
 
