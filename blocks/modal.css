@@ -9,13 +9,11 @@
   display: flex;
   pointer-events: none;
   transition: visibility 0s, opacity 0.2s linear;
-  opacity: 0;
   visibility: hidden;
 }
 
 .modal_opened {
   visibility: visible;
-  opacity: 1;
   pointer-events: all;
   transition: opacity 0.2s linear;
 }
@@ -129,7 +127,7 @@
 .modal__submit_disabled {
   background-color: white;
   color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid;
   cursor: default;
   border-radius: 2px;
 }
