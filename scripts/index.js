@@ -69,6 +69,16 @@ function closingModalOnEscape(e) {
   }
 }
 
+const closeModalOut = document.querySelectorAll(".modal");
+
+closeModalOut.forEach((mousedownClosing) => {
+  mousedownClosing.addEventListener("mousedown", (e) => {
+    if (e.target.classList.contains("modal")) {
+      closeModal(mousedownClosing);
+    }
+  });
+});
+
 function renderCard(cardData) {
   const cardElement = getCardElement(cardData);
   cardList.appendChild(cardElement);
