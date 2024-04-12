@@ -69,7 +69,7 @@ function handleProfileFormCreate(inputValues) {
     },
     
   ];
-  
+  newCards.addItem();
   cardValidator.resetValidation();
   cardPopUp.close();
 }
