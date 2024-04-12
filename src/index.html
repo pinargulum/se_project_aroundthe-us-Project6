@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Around the U.S.</title>
+    <meta name="author" content="Pinar Gulum" />
+    <meta
+      name="description"
+      content="Project Figma design using HTML and CSS "
+    />
+    <meta name="keywords" content="HTML, CSS, Figma, Responsive design" />
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          class="header__logo"
+          alt="Logo"
+          src="<%=require('./images/logo.png')%>"
+        />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="<%= require('./images/jacques-cousteau.jpg')%>"
+            alt="Avatar"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <div class="profile__wrapper">
+              <h1 class="profile__title">Jacques Cousteau</h1>
+              <button
+                class="profile__edit-button"
+                id="profile-edit-button"
+                type="button"
+              ></button>
+            </div>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button
+            class="profile__add-button"
+            type="button"
+            id="profile-add-button"
+          ></button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list"></ul>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__copyright">© 2022 Around The U.S.</p>
+      </footer>
+    </div>
+    <template id="cards-template">
+      <li class="card">
+        <button class="card__delete-button" type="button"></button>
+        <img src="#" alt="" class="card__image" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
+    <!--First Modal-->
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button
+          class="modal__edit-close"
+          type="button"
+          name="button"
+          id="modal-edit-close"
+        ></button>
+        <h3 class="modal__title" id="modal-title">Edit Profile</h3>
+        <form class="modal__form" id="modal-edit-form" name="modal-form">
+          <fieldset class="modal__fieldset">
+            <label class="modal__label" for="modal-user-input">
+              <input
+                class="modal__input"
+                id="modal-user-input"
+                type="text"
+                name="title"
+                placeholder="Name"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span id="modal-user-input-error"></span>
+            </label>
+            <label class="modal__label" for="modal-job-input">
+              <input
+                class="modal__input"
+                id="modal-job-input"
+                type="text"
+                name="description"
+                placeholder="Description"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <span id="modal-job-input-error"></span>
+            </label>
+            <button
+              class="modal__submit"
+              type="submit"
+              name="modal-save"
+              id="modal-save-button"
+            >
+              Save
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!--Second Modal-->
+    <div class="modal" id="card-add-modal">
+      <div class="modal__container">
+        <button
+          class="modal__edit-close"
+          type="button"
+          name="button"
+          id="modal-add-close"
+        ></button>
+        <h3 class="modal__title" id="modal-card-title">New Places</h3>
+        <form class="modal__form" id="modal-add-form" name="modal-form">
+          <fieldset class="modal__fieldset">
+            <label class="modal__label" for="modal-place-input">
+              <input
+                class="modal__input"
+                id="modal-place-input"
+                type="text"
+                name="title"
+                placeholder="Title"
+                minlength="1"
+                maxlength="30"
+                required
+              />
+              <span id="modal-place-input-error"></span>
+            </label>
+            <label class="modal__label" for="modal-link-input">
+              <input
+                class="modal__input"
+                id="modal-link-input"
+                type="url"
+                name="description"
+                placeholder="Image Link"
+                required
+              />
+              <span id="modal-link-input-error"></span>
+            </label>
+            <button
+              class="modal__submit"
+              type="submit"
+              name="modal-save"
+              id="modal-create-button"
+            >
+              Create
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!--Picture Modal-->
+    <div class="modal" id="preview-modal">
+      <div class="modal__container" id="preview-container">
+        <button
+          class="modal__edit-close"
+          type="button"
+          name="button"
+          id="picture-modal-close-button"
+        ></button>
+        <img
+          src="#"
+          alt=""
+          class="card__image card__image-preview"
+          id="modal-image-preview"
+        />
+        <p class="modal__text" id="modal-image-text"></p>
+      </div>
+    </div>
+  </body>
+</html>
