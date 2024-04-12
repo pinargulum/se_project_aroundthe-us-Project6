@@ -30,7 +30,5 @@ export default class popUpWithForm extends PopUp {
   
     
   
-  setSubmitAction(callBack) {
-    this._handleFormSubmit = callBack;
-  }
+  
 }
