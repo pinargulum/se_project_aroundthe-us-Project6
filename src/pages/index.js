@@ -3,8 +3,9 @@ import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import UserInfo from "../components/UserInfo.js";
 import popUpWithForm from "../components/popUpWithForm.js";
-import Utility from "../components/Utility.js";
+import Section from "../components/Section.js";
 import PopupWithImage from "../components/popUpWithImage.js";
+import { data } from "autoprefixer";
 
 export const initialCards = [
   {
@@ -41,9 +42,10 @@ const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const modalUserInput = document.querySelector("#modal-user-input");
 const modalJobInput = document.querySelector("#modal-job-input");
-const cardInput = cardAddModal.querySelector("#modal-place-input");
+const modalAddPlaceTitleInput =
+  cardAddModal.querySelector("#modal-place-input");
 
-const linkInput = cardAddModal.querySelector("#modal-link-input");
+const modalAddImageLinkInput = cardAddModal.querySelector("#modal-link-input");
 const profileEditForm = document.forms["modal-edit-form"];
 const profileAddForm = document.forms["modal-add-form"];
 const profileAddModal = document.querySelector("#profile-add-modal");
@@ -60,24 +62,17 @@ function handleProfileFormSubmit() {
   profilePopUp.close();
 }
 
-function handleProfileFormCreate(inputValues) {
-  
-  inputValues = [
-    { 
-      name: cardInput.value,
-      link: linkInput.value,
-    },
-    
-  ];
-  newCards.addItem();
+function handleProfileFormCreate(name, link) {
+  name = modalAddImageLinkInput.value;
+  link = modalAddImageLinkInput.value;
+
+  const cardElement = createCard(data);
+  newCards.addItem(cardElement);
+
   cardValidator.resetValidation();
   cardPopUp.close();
 }
-/*function addNewcard(data) {
-  element = createCard(data);
-  newCards.inputValues.addItem(element);
-}
-*/
+
 function handleImageClick(data) {
   previewPopUp.open(data);
 }
@@ -86,10 +81,11 @@ export function createCard(data) {
   const createNewCard = new Card(data, "#cards-template", handleImageClick);
   return createNewCard.generateCard(data);
 }
-//const cardList = document.querySelector(".cards__list");
 
-
-const newCards = new Utility({ items:initialCards, renderer:createCard }, ".cards__list")
+const newCards = new Section(
+  { items: initialCards, renderer: createCard },
+  ".cards__list"
+);
 
 newCards.renderItems();
 // NEWPOPUP FORMS
