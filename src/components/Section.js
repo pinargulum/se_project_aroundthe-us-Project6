@@ -6,8 +6,7 @@ export default class Utility {
   }
   renderItems() {
     this._initialArray.forEach((item) => {
-      this.addItem(this._renderer(item))
-      
+      this.addItem(this._renderer(item));
     });
   }
 

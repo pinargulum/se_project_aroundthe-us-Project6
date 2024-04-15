@@ -6,67 +6,20 @@ import popUpWithForm from "../components/popUpWithForm.js";
 import Section from "../components/Section.js";
 import PopupWithImage from "../components/popUpWithImage.js";
 import { data } from "autoprefixer";
-
-export const initialCards = [
-  {
-    name: "Yosemite Valley",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-  },
-  {
-    name: "Lake Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
-  },
-  {
-    name: "Bald Mountains",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
-  },
-  {
-    name: "Vanoise National Park",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
-  },
-];
-const popupSelector = document.querySelector(".modal");
-const profileAddButton = document.querySelector("#profile-add-button");
-const profileEditButton = document.querySelector("#profile-edit-button");
-const profileEditModal = document.querySelector("#profile-edit-modal");
-const cardAddModal = document.querySelector("#card-add-modal");
-const profileTitle = document.querySelector(".profile__title");
-const profileDescription = document.querySelector(".profile__description");
-const modalUserInput = document.querySelector("#modal-user-input");
-const modalJobInput = document.querySelector("#modal-job-input");
-const modalAddPlaceTitleInput =
-  cardAddModal.querySelector("#modal-place-input");
-
-const modalAddImageLinkInput = cardAddModal.querySelector("#modal-link-input");
-const profileEditForm = document.forms["modal-edit-form"];
-const profileAddForm = document.forms["modal-add-form"];
-const profileAddModal = document.querySelector("#profile-add-modal");
+import {
+  initialCards,
+  profileAddButton,
+  profileEditForm,
+  profileAddForm,
+} from "../../Utility.JS/Constant.js";
 
 function handleProfileFormSubmit() {
-  /*inputValues = [
-    { 
-      title: modalUserInput.value,
-      description: modalJobInput.value,
-    },
-  ];
-  */
   filledUserInfo.setUserInfo();
   profilePopUp.close();
 }
 
-function handleProfileFormCreate(name, link) {
-  name = modalAddImageLinkInput.value;
-  link = modalAddImageLinkInput.value;
-
-  const cardElement = createCard(data);
+function handleProfileFormCreate(inputValues) {
+  const cardElement = createCard(inputValues);
   newCards.addItem(cardElement);
 
   cardValidator.resetValidation();
@@ -88,7 +41,6 @@ const newCards = new Section(
 );
 
 newCards.renderItems();
-// NEWPOPUP FORMS
 const profilePopUp = new popUpWithForm(
   "#profile-edit-modal",
   handleProfileFormSubmit

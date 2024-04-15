@@ -15,6 +15,5 @@ export default class UserInfo {
     description = this._jobElement.value;
     this.profileTitle.textContent = title;
     this.profileDescription.textContent = description;
-    
-}
+  }
 }
