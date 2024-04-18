@@ -12,7 +12,7 @@ import {
   profileEditButton,
   profileEditForm,
   profileAddForm,
-} from "../../Utility/Constant.js";
+} from "../Utility/Constant.js";
 
 function handleProfileFormSubmit() {
   filledUserInfo.setUserInfo();
