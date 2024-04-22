@@ -15,16 +15,11 @@ export default class UserInfo {
     this._jobElement.value = profileDescription.textContent;
   }
 
-  setUserInfo(title, description) {
-    this._nameElement.textContent = title;
-    this._jobElement.textContent = description;
+  setUserInfo() {
+    this._nameElement.name.title = this._nameElement.value;
+    this._jobElement.name.description = this._jobElement.value;
+   
   }
 }
 
-/*setUserInfo(title, description) {
-    this._nameElement.textContent = title;
-    this._jobElement.textContent = description;
-    this.profileTitle.textContent = title;
-    this.profileDescription.textContent = description;
-  }
-*/
+

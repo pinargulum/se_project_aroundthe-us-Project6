@@ -13,12 +13,11 @@ import {
   profileEditForm,
   profileAddForm,
   settings,
-  modalUserInput,
-  modalJobInput,
 } from "../Utility/Constant.js";
 
-function handleProfileFormSubmit() {
-  userInfo.setUserInfo();
+function handleProfileFormSubmit({ title, description }) {
+  
+  userInfo.setUserInfo({ title, description });
   profilePopUp.close();
 }
 
