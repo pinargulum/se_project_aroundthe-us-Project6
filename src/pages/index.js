@@ -12,18 +12,19 @@ import {
   profileEditButton,
   profileEditForm,
   profileAddForm,
+  settings
 } from "../Utility/Constant.js";
 
 function handleProfileFormSubmit() {
-  filledUserInfo.setUserInfo();
+  
   profilePopUp.close();
 }
 
 function handleProfileFormCreate(inputValues) {
   const cardElement = createCard(inputValues);
-  newCards.addItem(cardElement);
+  section.addItem(cardElement);
 
-  cardValidator.resetValidation();
+  
   cardPopUp.close();
 }
 
@@ -32,16 +33,16 @@ function handleImageClick(data) {
 }
 
 export function createCard(data) {
-  const createNewCard = new Card(data, "#cards-template", handleImageClick);
-  return createNewCard.generateCard(data);
+  const newCard = new Card(data, "#cards-template", handleImageClick);
+  return newCard.generateCard();
 }
 
-const newCards = new Section(
+const section = new Section(
   { items: initialCards, renderer: createCard },
   ".cards__list"
 );
 
-newCards.renderItems();
+section.renderItems();
 const profilePopUp = new popUpWithForm(
   "#profile-edit-modal",
   handleProfileFormSubmit
@@ -50,11 +51,11 @@ const profilePopUp = new popUpWithForm(
 const cardPopUp = new popUpWithForm("#card-add-modal", handleProfileFormCreate);
 const previewPopUp = new PopupWithImage("#preview-modal");
 previewPopUp.setEventListeners();
-const filledUserInfo = new UserInfo("#modal-user-input", "#modal-job-input");
+const userInfo = new UserInfo("#modal-user-input", "#modal-job-input");
 
 profileEditButton.addEventListener("click", () => {
   profilePopUp.open();
-  filledUserInfo.getUserInfo();
+  userInfo.getUserInfo();
 });
 
 profileAddButton.addEventListener("click", () => {
@@ -64,17 +65,8 @@ profileAddButton.addEventListener("click", () => {
 profilePopUp.setEventListeners();
 cardPopUp.setEventListeners();
 
-//Form Validator with Form Validator Class
-const settings = {
-  formElement: ".modal__form",
-  inputSelector: ".modal__input",
-  submitButtonSelector: ".modal__submit",
-  inactiveButtonClass: "modal__submit_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
-};
+const profileFormValidator = new FormValidator(settings, profileEditForm);
+const profileCardFormValidator = new FormValidator(settings, profileAddForm);
+profileFormValidator.enableValidation();
+profileCardFormValidator.enableValidation();
 
-const formValidator = new FormValidator(settings, profileEditForm);
-const cardValidator = new FormValidator(settings, profileAddForm);
-formValidator.enableValidation();
-cardValidator.enableValidation();
