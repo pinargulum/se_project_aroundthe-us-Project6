@@ -12,11 +12,13 @@ import {
   profileEditButton,
   profileEditForm,
   profileAddForm,
-  settings
+  settings,
+  modalUserInput,
+  modalJobInput,
 } from "../Utility/Constant.js";
 
 function handleProfileFormSubmit() {
-  
+  userInfo.setUserInfo();
   profilePopUp.close();
 }
 
@@ -24,7 +26,6 @@ function handleProfileFormCreate(inputValues) {
   const cardElement = createCard(inputValues);
   section.addItem(cardElement);
 
-  
   cardPopUp.close();
 }
 
@@ -69,4 +70,3 @@ const profileFormValidator = new FormValidator(settings, profileEditForm);
 const profileCardFormValidator = new FormValidator(settings, profileAddForm);
 profileFormValidator.enableValidation();
 profileCardFormValidator.enableValidation();
-
