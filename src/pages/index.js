@@ -11,19 +11,17 @@ import {
   profileAddButton,
   profileEditButton,
   config,
-  profileAddForm,
-  profileEditForm,
 } from "../Utility/Constant.js";
 
-function handleProfileFormSubmit() {
-  userInfo.setUserInfo();
+function handleProfileFormSubmit({ title, description }) {
+  userInfo.setUserInfo({ title, description });
   profileEditPopUp.close();
 }
 
 function handleProfileFormCreate(inputValues) {
   const cardElement = createCard(inputValues);
   section.addItem(cardElement);
-  formValidators[profileAddForm].resetValidation();
+  //formValidators[profileAddForm].resetValidation();
   profileCardPopUp.close();
 }
 
@@ -72,8 +70,8 @@ const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(".modal__form"));
   formList.forEach((formElement) => {
     const validator = new FormValidator(config, formElement);
-    formValidators[profileEditForm] = validator;
-    formValidators[profileAddForm] = validator;
+    const profileForm = formElement.querySelectorAll(".modal__form");
+    formValidators[profileForm] = validator;
     validator.enableValidation();
   });
 };

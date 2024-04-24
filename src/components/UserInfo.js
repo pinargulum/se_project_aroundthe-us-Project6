@@ -1,18 +1,18 @@
-import popUpWithForm from "./PopUpWithForm.js";
 
-import { profileTitle, profileDescription } from "../Utility/Constant.js";
 export default class UserInfo {
-  constructor(nameSelector, jobSelector) {
-    this._nameElement = document.querySelector(nameSelector);
-    this._jobElement = document.querySelector(jobSelector);
+  constructor(titleSelector, descriptionSelector) {
+    this._nameElement = document.querySelector(titleSelector);
+    this._jobElement = document.querySelector(descriptionSelector);
   }
 
   getUserInfo() {
-    this._nameElement.value = profileTitle.textContent;
-    this._jobElement.value = profileDescription.textContent;
+    this.profileTitle = document.querySelector(".profile__title");
+    this.profileDescription = document.querySelector(".profile__description");
+    this._nameElement.value = this.profileTitle.textContent;
+    this._jobElement.value = this.profileDescription.textContent;
   }
 
-  setUserInfo(title, description) {
+  setUserInfo({ title, description }) {
     title = this._nameElement.value;
     description = this._jobElement.value;
     profileTitle.textContent = title;
