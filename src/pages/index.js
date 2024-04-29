@@ -16,12 +16,12 @@ import {
 function handleProfileFormSubmit({ title, description }) {
   userInfo.setUserInfo({ title, description });
   profileEditPopUp.close();
+  
 }
 
 function handleProfileFormCreate(inputValues) {
   const cardElement = createCard(inputValues);
   section.addItem(cardElement);
-  //formValidators[profileAddForm].resetValidation();
   profileCardPopUp.close();
 }
 
@@ -50,7 +50,7 @@ const profileCardPopUp = new PopUpWithForm(
   handleProfileFormCreate
 );
 const previewImagePopUp = new PopupWithImage("#preview-modal");
-const userInfo = new UserInfo("#modal-user-input", "#modal-job-input");
+const userInfo = new UserInfo(".profile__title", ".profile__description");
 
 profileEditButton.addEventListener("click", () => {
   profileEditPopUp.open();

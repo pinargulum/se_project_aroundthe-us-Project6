@@ -1,21 +1,23 @@
-
+import { popupSelector } from "../Utility/Constant";
+import PopUp from "./PopUp";
 export default class UserInfo {
-  constructor(titleSelector, descriptionSelector) {
-    this._nameElement = document.querySelector(titleSelector);
-    this._jobElement = document.querySelector(descriptionSelector);
+  constructor(nameSelector, jobSelector) {
+    this._nameElement = document.querySelector(nameSelector);
+    this._jobElement = document.querySelector(jobSelector);
   }
 
   getUserInfo() {
-    this.profileTitle = document.querySelector(".profile__title");
-    this.profileDescription = document.querySelector(".profile__description");
-    this._nameElement.value = this.profileTitle.textContent;
-    this._jobElement.value = this.profileDescription.textContent;
+  title.value = this._nameElement.textContent;
+    description.value = this._jobElement.textContent;
+     this._nameElement.title = this._nameElement.value;
+    this._jobElement.description = this._jobElement.value;
+    
   }
 
   setUserInfo({ title, description }) {
-    title = this._nameElement.value;
-    description = this._jobElement.value;
-    profileTitle.textContent = title;
-    profileDescription.textContent = description;
+    //this._nameElement.title = this._nameElement.value;
+    //this._jobElement.description = this._jobElement.value;
+    this._nameElement.textContent = title;
+    this._jobElement.textContent = description;
   }
 }
