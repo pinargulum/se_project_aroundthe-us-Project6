@@ -184,7 +184,7 @@ span[id$="-error"] {
 
 @media screen and (max-width: 580px) {
   #preview-container {
-    margin-top: 36px;
+    margin-top: 163px;
     margin-bottom: 33px;
     margin-left: auto;
     width: 240px;
@@ -204,10 +204,10 @@ span[id$="-error"] {
   }
 
   .modal__container {
-      max-height: 300px;
-      margin: 123px auto;
-      max-width: 240px;
-      padding: 25px 22px 45px 22px;
+    max-height: 300px;
+    margin: 117px auto;
+    max-width: 240px;
+    padding: 25px 22px 45px 22px;
   }
 
   .modal__text {
@@ -216,15 +216,14 @@ span[id$="-error"] {
   .modal__submit {
     left: 22px;
     right: 22px;
-    bottom: 25px; 
+    bottom: 25px;
     max-width: 238px;
   }
   .modal__input {
     max-width: 238px;
     max-height: 27px;
-
   }
-  
+
   .modal__edit-close {
     width: 26px;
     height: 26px;
