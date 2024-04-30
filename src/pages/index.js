@@ -11,10 +11,12 @@ import {
   profileAddButton,
   profileEditButton,
   config,
+  formData
+
 } from "../Utility/Constant.js";
 
-function handleProfileFormSubmit({ title, description }) {
-  userInfo.setUserInfo({ title, description });
+function handleProfileFormSubmit(formData) {
+  userInfo.setUserInfo(formData);
   profileEditPopUp.close();
   
 }

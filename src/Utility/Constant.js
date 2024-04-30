@@ -1,3 +1,4 @@
+
 export const initialCards = [
   {
     name: "Yosemite Valley",
@@ -33,11 +34,11 @@ export const profileTitle = document.querySelector(".profile__title");
 export const profileDescription = document.querySelector(
   ".profile__description"
 );
-export const modalUserInput = document.querySelector("#modal-user-input");
-export const modalJobInput = document.querySelector("#modal-job-input");
+export const newName = document.querySelector("#modal-user-input");
+export const newJob = document.querySelector("#modal-job-input");
 export const modalAddPlaceTitleInput =
   cardAddModal.querySelector("#modal-place-input");
-
+export const formData = { title: newName, description: newJob };
 export const modalAddImageLinkInput =
   cardAddModal.querySelector("#modal-link-input");
 export const profileEditForm = document.forms["modal-edit-form"];
