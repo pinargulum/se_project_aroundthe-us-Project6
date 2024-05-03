@@ -101,7 +101,7 @@
   height: 27.26px;
   line-height: 17px;
   width: 358px;
-  
+  padding: 0 36px 0 36px;
   
 }
 
@@ -238,7 +238,7 @@ span[id$="-error"] {
     
   }
   .modal__input {
-    
+    padding: 0 22px;
     max-width: 238px;
     
   }
