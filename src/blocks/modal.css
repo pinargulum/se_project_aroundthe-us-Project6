@@ -187,7 +187,9 @@ span[id$="-error"] {
     top: 163px;
     width: 240px;
     min-height: 299px;
-    position: fixed;
+    position: absolute;
+    left: 40px;
+    margin: auto;
   }
 
   .card__image-preview {
@@ -206,9 +208,9 @@ span[id$="-error"] {
     max-height: 322px;
     max-width: 282px;
     padding: 25px 22px 46px 22px;
-    position: fixed;
+    position: absolute;
     top: 123px;
-    margin: 0;
+    margin: auto;
   }
   .modal__title {
     max-width: 238px;
@@ -225,6 +227,7 @@ span[id$="-error"] {
     right: 22px;
     bottom: 25px;
     max-width: 238px;
+    height: 46px;
     
   }
   .modal__input {
