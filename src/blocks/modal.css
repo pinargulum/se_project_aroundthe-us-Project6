@@ -184,16 +184,15 @@ span[id$="-error"] {
 
 @media screen and (max-width: 580px) {
   #preview-container {
-    top: 163px;
-    width: 240px;
+    margin-top: 136px;
+    max-width: 240px;
     min-height: 299px;
-    position: absolute;
-    left: 40px;
-    margin: auto;
+    margin-bottom: 133px;
+    margin-left: auto;
   }
 
   .card__image-preview {
-    width: 240px;
+    max-width: 240px;
     min-height: 299px;
   }
 
@@ -208,9 +207,9 @@ span[id$="-error"] {
     max-height: 322px;
     max-width: 282px;
     padding: 25px 22px 46px 22px;
-    position: absolute;
-    top: 123px;
-    margin: auto;
+    margin-top: 123px;
+    margin-bottom: 123px;
+    margin-left: auto;
   }
   .modal__title {
     max-width: 238px;
