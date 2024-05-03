@@ -213,9 +213,10 @@ span[id$="-error"] {
   }
   .modal__title {
     max-width: 238px;
+    height: 22px;
     font-size: 18px;
     line-height: 21.78px;
-    margin: 0;
+    margin-bottom: 76px;
     
   }
   .modal__text {
@@ -227,7 +228,7 @@ span[id$="-error"] {
     bottom: 25px;
     max-width: 238px;
     height: 46px;
-    top: 46px;
+    
     
   }
   .modal__input {
