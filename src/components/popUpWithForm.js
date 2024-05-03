@@ -6,10 +6,10 @@ export default class PopUpWithForm extends PopUp {
     this._popUpForm = this._popUpElement.querySelector(".modal__form");
     this._handleFormSubmit = handleFormSubmit;
   }
-  open() {
+ /* open() {
     super.open();
   }
-
+*/
   setEventListeners() {
     super.setEventListeners();
     this._popUpForm.addEventListener("submit", (evt) => {

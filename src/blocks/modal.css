@@ -184,11 +184,10 @@ span[id$="-error"] {
 
 @media screen and (max-width: 580px) {
   #preview-container {
-    margin-top: 163px;
-    margin-bottom: 33px;
-    margin-left: auto;
+    top: 163px;
     width: 240px;
     min-height: 299px;
+    position: fixed;
   }
 
   .card__image-preview {
@@ -204,12 +203,20 @@ span[id$="-error"] {
   }
 
   .modal__container {
-    max-height: 300px;
-    margin: 117px auto;
-    max-width: 240px;
-    padding: 25px 22px 45px 22px;
+    max-height: 322px;
+    max-width: 282px;
+    padding: 25px 22px 46px 22px;
+    position: fixed;
+    top: 123px;
+    margin: 0;
   }
-
+  .modal__title {
+    max-width: 238px;
+    font-size: 18px;
+    line-height: 21.78px;
+    margin: 0;
+    
+  }
   .modal__text {
     font-size: 12px;
   }
@@ -218,8 +225,10 @@ span[id$="-error"] {
     right: 22px;
     bottom: 25px;
     max-width: 238px;
+    
   }
   .modal__input {
+    
     max-width: 238px;
     max-height: 27px;
   }

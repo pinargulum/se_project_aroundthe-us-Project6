@@ -56,7 +56,7 @@ const userInfo = new UserInfo(".profile__title", ".profile__description");
 
 profileEditButton.addEventListener("click", () => {
   profileEditPopUp.open();
-  userInfo.getUserInfo();
+  userInfo.getUserInfo(formData);
 });
 
 profileAddButton.addEventListener("click", () => {
@@ -69,13 +69,14 @@ previewImagePopUp.setEventListeners();
 
 const formValidators = {};
 const enableValidation = (config) => {
-  const formList = Array.from(document.querySelectorAll(".modal__form"));
+  const formList = Array.from(document.querySelectorAll(".modal__form"))
   formList.forEach((formElement) => {
-    const validator = new FormValidator(config, formElement);
-    const profileForm = formElement.querySelectorAll(".modal__form");
+    const validator = new FormValidator(config, formElement)
+    const profileForm = formElement.getAttribute('name');
     formValidators[profileForm] = validator;
-    validator.enableValidation();
+   validator.enableValidation();
   });
 };
 
 enableValidation(config);
+
