@@ -210,12 +210,14 @@ span[id$="-error"] {
     margin-top: 123px;
     margin-bottom: 123px;
     margin-left: auto;
-    gap: 30px;
+    
   }
   .modal__fieldset {
+    gap: 30px;
     padding: 0 22px;
     max-width: 282px;
     height: 26px;
+    margin-bottom: 25px;
   }
   .modal__title {
     max-width: 238px;
@@ -229,9 +231,7 @@ span[id$="-error"] {
     font-size: 12px;
   }
   .modal__submit {
-    left: 22px;
-    right: 22px;
-    bottom: 25px;
+    
     max-width: 238px;
     height: 46px;
     
