@@ -68,7 +68,7 @@
   font-style: normal;
   font-weight: 900;
   line-height: 29px;
-  margin: 34px 0 0 0;
+  margin: 34px 0 54px 0;
   width: 330px;
 }
 
@@ -86,7 +86,7 @@
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  padding: 0;
+  padding: 0 36px 0 36px;
   margin: 0;
   width: 358px;
   height: 27.26px;
@@ -99,7 +99,7 @@
   font-size: 14px;
   height: 27.26px;
   line-height: 17px;
-  margin-top: 54px;
+  
   
 }
 
@@ -130,7 +130,7 @@ span[id$="-error"] {
   border: none;
   pointer-events: all;
   text-align: center;
-  margin: 0;
+  margin: 0 36px 36.51px 36px;
   padding: 0;
   right: 36px;
   left: 36px;
@@ -209,6 +209,7 @@ span[id$="-error"] {
     margin-top: 123px;
     margin-bottom: 123px;
     margin-left: auto;
+    gap: 30px;
   }
   .modal__title {
     max-width: 238px;
