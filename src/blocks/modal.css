@@ -200,11 +200,11 @@ span[id$="-error"] {
 
   .modal__container {
     bottom: 123px;
-    top: 123px;
     height: 322px;
-    max-width: 282px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    max-width: 282px;
+    padding-bottom: 25px;
+    top: 123px;
   }
   .modal__fieldset {
     gap: 30px;
