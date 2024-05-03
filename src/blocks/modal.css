@@ -68,8 +68,9 @@
   font-style: normal;
   font-weight: 900;
   line-height: 29px;
-  margin: 34px 0 54px 0;
+  padding: 0;
   width: 330px;
+  margin: 34px 64px 54px 36px;
 }
 
 .modal__form {
@@ -131,11 +132,11 @@ span[id$="-error"] {
   border: none;
   pointer-events: all;
   text-align: center;
-  margin: 0 36px 36.51px 36px;
   padding: 0;
   right: 36px;
   left: 36px;
   width: 358px;
+  margin: 0;
 }
 
 .modal__submit:hover:not(:disabled) {
