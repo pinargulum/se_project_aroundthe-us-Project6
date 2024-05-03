@@ -207,15 +207,15 @@ span[id$="-error"] {
   .modal__container {
     max-height: 322px;
     max-width: 282px;
-    padding: 0 22px 0 22px;
     margin-top: 123px;
     margin-bottom: 123px;
     margin-left: auto;
     gap: 30px;
   }
   .modal__fieldset {
-    margin: 0 22px 0 22px;
+    padding: 0 22px;
     max-width: 282px;
+    height: 26px;
   }
   .modal__title {
     max-width: 238px;
@@ -240,7 +240,7 @@ span[id$="-error"] {
   .modal__input {
     
     max-width: 238px;
-    max-height: 27px;
+    
   }
 
   .modal__edit-close {
