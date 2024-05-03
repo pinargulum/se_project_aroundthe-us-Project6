@@ -215,7 +215,6 @@ span[id$="-error"] {
   }
   .modal__title {
     font-size: 18px;
-    height: 22px;
     line-height: 21.78px;
     padding: 25px 22px 76px;
     max-width: 238px;
@@ -224,8 +223,6 @@ span[id$="-error"] {
     font-size: 12px;
   }
   .modal__submit {
-    max-width: 238px;
-    height: 46px;
     height: 46px;
     max-width: 238px;
     bottom: 25px;
