@@ -100,7 +100,7 @@
   height: 27.26px;
   line-height: 17px;
   margin-top: 54px;
-  width: 100%;
+  
 }
 
 .modal__error_visible {
@@ -116,11 +116,6 @@ span[id$="-error"] {
   border-bottom: 1px solid #ff0000;
 }
 
-.modal__label {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
 .modal__submit {
   position: absolute;
@@ -139,6 +134,7 @@ span[id$="-error"] {
   padding: 0;
   right: 36px;
   left: 36px;
+  width: 358px;
 }
 
 .modal__submit:hover:not(:disabled) {
