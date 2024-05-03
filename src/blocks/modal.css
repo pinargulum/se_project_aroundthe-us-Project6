@@ -206,7 +206,7 @@ span[id$="-error"] {
   .modal__container {
     max-height: 322px;
     max-width: 282px;
-    padding: 25px 22px 46px 22px;
+    padding: 25px 22px 0 22px;
     margin-top: 123px;
     margin-bottom: 123px;
     margin-left: auto;
@@ -227,6 +227,7 @@ span[id$="-error"] {
     bottom: 25px;
     max-width: 238px;
     height: 46px;
+    top: 46px;
     
   }
   .modal__input {
