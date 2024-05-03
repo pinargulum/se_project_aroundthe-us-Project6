@@ -236,7 +236,6 @@ span[id$="-error"] {
   .modal__input {
     max-width: 238px;
     margin: 0 22px 0 22px;
-
     max-width: 238px;
   }
 
@@ -244,6 +243,6 @@ span[id$="-error"] {
     width: 26px;
     height: 26px;
     top: -45px;
-    right: 19px;
+    right: 10px;
   }
 }
