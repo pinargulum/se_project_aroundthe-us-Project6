@@ -33,7 +33,7 @@
   width: 430px;
   height: 330px;
   margin: auto;
-  padding: 34px 36px 36px;
+  padding: 0;
 }
 
 .modal__edit-close {
@@ -136,7 +136,7 @@ span[id$="-error"] {
   right: 36px;
   left: 36px;
   width: 358px;
-  margin: 0 36px 0px;
+  margin: 0;
 }
 
 .modal__submit:hover:not(:disabled) {
