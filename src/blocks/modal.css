@@ -22,7 +22,6 @@
   opacity: 1;
   height: auto;
 }
-
 .modal__container {
   display: flex;
   flex-direction: column;
@@ -30,12 +29,11 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   position: relative;
-  width: 430px;
-  height: 330px;
+  max-width: 430px;
+  max-height: 330px;
   margin: auto;
-  padding: 0;
+  padding: 34px 36px 36px;
 }
-
 .modal__edit-close {
   position: absolute;
   width: 40px;
@@ -53,7 +51,6 @@
   display: block;
   transition: opacity 1s ease-in-out;
 }
-
 .modal__edit-close:hover {
   opacity: 1;
   cursor: pointer;
@@ -63,59 +60,59 @@
 
 .modal__title {
   color: #000;
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 900;
   line-height: 29px;
-  margin: 0;
-  padding: 34px 64px 54px 36px;
+  margin: 0 0 54px;
   width: 330px;
 }
-
 .modal__form {
   margin: 0;
 }
-
 .modal__fieldset {
-  border: none;
   display: flex;
   flex-direction: column;
-  font-family: Inter, Arial, sans-serif;
+  justify-items: center;
+  border: none;
+  border-style: none;
+  font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  gap: 29.74px;
-  justify-items: center;
-  padding: 13.26px 0;
+  padding: 0;
+  margin: 0;
 }
-
 .modal__input {
-  border: 1px rgba(0, 0, 0, 0.2);
-  border-style: none none solid;
-  box-sizing: border-box;
   font-size: 14px;
   line-height: 17px;
-  margin: 0 36px;
-  padding: 0;
-  width: 358px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  height: 27.26px;
+  box-sizing: border-box;
+  margin-bottom: 29.75px;
+  margin-top: 0;
 }
 
 .modal__error_visible {
   border-bottom-color: #ff0000;
 }
-
 span[id$="-error"] {
   color: #ff0000;
   font-size: 12px;
 }
-
 .modal__input_type_error {
   border-bottom: 1px solid #ff0000;
 }
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .modal__submit {
-  position: absolute;
-  bottom: 36.51px;
   height: 50.15px;
   border-radius: 2px;
   background: #000;
@@ -126,13 +123,9 @@ span[id$="-error"] {
   border: none;
   pointer-events: all;
   text-align: center;
+  margin: 18px 0 0;
   padding: 0;
-  right: 36px;
-  left: 36px;
-  width: 358px;
-  margin: 0;
 }
-
 .modal__submit:hover:not(:disabled) {
   opacity: 0.8;
   cursor: pointer;
@@ -145,12 +138,10 @@ span[id$="-error"] {
   cursor: default;
   border-radius: 2px;
 }
-
 .modal__submit_disabled:hover {
   opacity: 1;
   cursor: default;
 }
-
 #preview-container {
   width: 433px;
   height: 540px;
@@ -160,13 +151,11 @@ span[id$="-error"] {
   margin-bottom: 90px;
   margin-left: auto;
 }
-
 .card__image-preview {
   width: 433px;
   height: 540px;
   object-fit: cover;
 }
-
 .modal__text {
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
@@ -177,66 +166,36 @@ span[id$="-error"] {
   margin-top: 5px;
 }
 
-@media screen and (max-width: 580px) {
- 
+@media screen and (max-width: 585px) {
   #preview-container {
-    margin-top: 136px;
-    max-width: 240px;
-    min-height: 299px;
-    margin-bottom: 133px;
+    margin-top: 36px;
+    margin-bottom: 33px;
     margin-left: auto;
+    width: 240px;
+    min-height: 299px;
   }
-
   .card__image-preview {
-    max-width: 240px;
-    height: 299px;
+    width: 240px;
+    min-height: 299px;
   }
-
   #picture-modal-close-button {
     width: 30px;
     height: 30px;
     top: -36px;
     right: -31px;
   }
-
   .modal__container {
-    
-    max-height: 322px;
-    
     max-width: 282px;
-    
-    
-  }
-  .modal__fieldset {
-    gap: 30px;
-    height: 26px;
-    max-width: 282px;
-    padding: 9px 0;
-    margin: 0;
-  }
-  .modal__title {
-    font-size: 18px;
-    line-height: 21.78px;
-    padding: 25px 22px 76px;
-    max-width: 238px;
+    position: absolute;
+    left: 22px;
+    right: 16px;
+    top: 123px;
+    bottom: 123px;
+    padding: 25px 22px 22px;
   }
   .modal__text {
     font-size: 12px;
   }
-  .modal__submit {
-    height: 46px;
-    max-width: 238px;
-    bottom: 25px;
-    margin: 0;
-    left: 22px;
-    right: 22px;
-  }
-  .modal__input {
-    max-width: 238px;
-    margin: 0 22px 0 22px;
-    max-width: 238px;
-  }
-
   .modal__edit-close {
     width: 26px;
     height: 26px;
