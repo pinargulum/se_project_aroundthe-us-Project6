@@ -184,6 +184,15 @@ span[id$="-error"] {
     top: -36px;
     right: -31px;
   }
+  .modal__submit {
+    margin-bottom: 0 22px 25px 22px;
+    width: 238px;
+    height: 46px;
+  }
+  .modal__title {
+    margin-top: 25px;
+    font-size: 18px;
+  }
   .modal__container {
     max-width: 282px;
     position: absolute;
