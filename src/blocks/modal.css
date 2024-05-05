@@ -178,6 +178,7 @@ span[id$="-error"] {
 }
 
 @media screen and (max-width: 580px) {
+ 
   #preview-container {
     margin-top: 136px;
     max-width: 240px;
@@ -188,7 +189,7 @@ span[id$="-error"] {
 
   .card__image-preview {
     max-width: 240px;
-    min-height: 299px;
+    height: 299px;
   }
 
   #picture-modal-close-button {
@@ -199,12 +200,12 @@ span[id$="-error"] {
   }
 
   .modal__container {
-    bottom: 123px;
-    height: 322px;
-    margin: 0 auto;
+    
+    max-height: 322px;
+    
     max-width: 282px;
-    padding-bottom: 25px;
-    top: 123px;
+    
+    
   }
   .modal__fieldset {
     gap: 30px;
