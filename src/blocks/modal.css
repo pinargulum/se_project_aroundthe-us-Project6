@@ -185,9 +185,9 @@ span[id$="-error"] {
     right: -31px;
   }
   .modal__submit {
-    margin-bottom: 0 22px 25px 22px;
-    width: 238px;
     height: 46px;
+    margin: 46px 0 25px 0;
+    width: 238px;
   }
   .modal__title {
     margin-top: 25px;
