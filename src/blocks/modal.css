@@ -186,19 +186,24 @@ span[id$="-error"] {
   }
   .modal__submit {
     height: 46px;
-    margin: 46px 0 25px 0;
     max-width: 238px;
+    position: absolute;
+    bottom: 25px;
+    margin: 0;
+    left: 22px;
+    right: 22px;
   }
   .modal__fieldset {
     max-width: 238px;
-    padding: 9px 0;
+    padding: 0 22px 46px 22px;
   }
   .modal__input {
     max-width: 238px;
   }
   .modal__title {
-    margin-top: 25px;
     font-size: 18px;
+    padding: 25px 22px 76px 22px;
+    max-width: 238px;
   }
   .modal__container {
     max-width: 282px;
