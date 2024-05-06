@@ -4,20 +4,17 @@ export default class UserInfo {
     this._jobElement = document.querySelector(jobSelector);
   }
 
-  getUserInfo({ title, description }) {
-    title.value = this._nameElement.textContent;
-    description.value = this._jobElement.textContent;
-
+  getUserInfo() {
     return {
       title: this._nameElement.textContent,
       description: this._jobElement.textContent,
     };
   }
 
-  setUserInfo({ title, description }) {
-    this._nameElement.title = this._nameElement.value;
-    this._jobElement.description = this._jobElement.value;
-    this._nameElement.textContent = title;
-    this._jobElement.textContent = description;
-  }
+  
+    setUserInfo({ title, description }) {
+      this._nameElement.textContent = title;
+      this._jobElement.textContent = description;
+    }
+  
 }
