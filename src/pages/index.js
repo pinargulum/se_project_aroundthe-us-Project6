@@ -51,10 +51,16 @@ const profileCardPopup = new PopupWithForm(
 );
 const previewImagePopup = new PopupWithImage("#preview-modal");
 const userInfo = new UserInfo(".profile__title", ".profile__description");
+const { description, title } = userInfo.getUserInfo();
+  formData.description.value = description;
+  formData.title.value = title;
 
 profileEditButton.addEventListener("click", () => {
+  formValidators["profile-edit-form"].resetValidation();
   profileEditPopup.open();
-  userInfo.getUserInfo(formData);
+  const { description, title } = userInfo.getUserInfo();
+  formData.description.value = description;
+  formData.title.value = title;
 });
 
 profileAddButton.addEventListener("click", () => {
@@ -77,6 +83,4 @@ const enableValidation = (config) => {
 };
 
 enableValidation(config);
-formValidators["profile-add-form"].enableValidation();
-formValidators["profile-add-form"].resetValidation();
-formValidators["profile-edit-form"].enableValidation();
+
