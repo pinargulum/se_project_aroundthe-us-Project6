@@ -175,21 +175,25 @@ span[id$="-error"] {
 
 @media screen and (max-width: 585px) {
   #preview-container {
-    margin-top: 36px;
-    margin-bottom: 33px;
-    margin-left: auto;
-    width: 240px;
-    min-height: 299px;
+    
+    max-height: 299px;
+        margin-bottom: 133px;
+        margin-left: auto;
+        margin-top: 136px;
+        padding: 0;
+        width: 240px;
+    
   }
   .card__image-preview {
-    width: 240px;
     min-height: 299px;
+    width: 240px;
+    margin-top: 29px;
   }
   #picture-modal-close-button {
-    width: 30px;
     height: 30px;
-    top: -36px;
-    right: -31px;
+        right: -20px;
+        top: -36px;
+        width: 30px;
   }
   .modal__submit {
     height: 46px;
@@ -227,6 +231,8 @@ span[id$="-error"] {
   }
   .modal__text {
     font-size: 12px;
+        width: 240px;
+        margin-top: 10px;
   }
   .modal__edit-close {
     width: 26px;
