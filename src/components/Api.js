@@ -1,14 +1,14 @@
 
 export class Api {
-  constructor(baseUrl, headers) {
-    this.baseUrl = baseUrl;
-    this.headers = headers;
+  constructor(options) {
+    this.baseUrl = options.baseUrl;
+    this.headers = options.headers;
   }
-  _checkResponse(response) {
-    if (response.ok) {
-      return response.json();
+  _checkResponse(res) {
+    if (res.ok) {
+      return res.json();
     }
-    return Promise.reject(`Error ${response.status}`);
+    return Promise.reject(`Error ${res.status}`);
   }
 
   getInitialCards() {
@@ -23,10 +23,10 @@ export class Api {
   }
 
   renderCards() {
-    return Promise.all(this.getUserInfo(), this.getCardTamplate());
+    return Promise.all(this.getUserInfo(), this.getInitialCards());
   }
 
-  editProfile(name, about) {
+  async editProfile(name, about) {
     return fetch(`${this.baseUrl}/users/me`, {
       method: "PATCH",
       headers: this.headers,

@@ -20,7 +20,7 @@ import { Api } from "../components/Api.js";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "2c0d2519-d264-4b5a-8123-b28a9f9ffd80",
+    authorization: "e4da9a60-14a9-470b-82ad-04b9f0f450f7",
     "Content-Type": "application/json",
   },
   
@@ -34,6 +34,9 @@ const api = new Api({
     },
     "token": "2c0d2519-d264-4b5a-8123-b28a9f9ffd80"
 */
+
+
+
 /*function handleProfileFormSubmit(formData) {
   userInfo.setUserInfo(formData);
   profileEditPopup.close();
@@ -56,11 +59,35 @@ function handleProfileFormSubmit(inputValues) {
     });
 }
 
+
+
+
+
+
 function handleProfileFormCreate(inputValues) {
-  const cardElement = createCard(inputValues);
-  section.addItem(cardElement);
-  profileCardPopup.close();
+  
+  
+  api
+    .addNewCard(inputValues.name, inputValues.link)
+    .then((inputValues) => {
+      
+      const cardElement = createCard(inputValues);
+  section.addItem(cardElement);;
+      
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+    .finally(() => {
+      profileCardPopup.close();
+    });
 }
+
+
+
+
+
+
 
 function handleImageClick(data) {
   previewImagePopup.open(data);
@@ -74,6 +101,11 @@ function createCard(data) {
   const newCard = new Card(data, "#cards-template", handleImageClick);
   return newCard.generateCard();
 }
+
+
+
+
+
 
 const section = new Section(
   { items: initialCards, renderer: createCard },
