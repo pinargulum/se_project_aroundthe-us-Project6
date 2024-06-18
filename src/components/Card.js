@@ -1,3 +1,5 @@
+import Popup from "./Popup.js";
+import PopupWithForm from "./PopupWithForm";
 class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
@@ -21,8 +23,9 @@ class Card {
     this._cardImage.addEventListener("click", () => {
       this._handleImageClick(this);
     });
-
+    
     this._cardDeleteButton.addEventListener("click", () => {
+      
       this._cardElement.remove();
     });
   }

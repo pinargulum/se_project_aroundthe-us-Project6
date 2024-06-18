@@ -44,6 +44,8 @@ export const modalAddImageLinkInput =
 export const profileEditForm = document.forms["modal-edit-form"];
 export const profileAddForm = document.forms["modal-add-form"];
 export const profileAddModal = document.querySelector("#profile-add-modal");
+export const avatarEditButton = document.querySelector(".avatar__edit-button");
+export const profileSaveButton = document.querySelector("#modal-save-button");
 export const config = {
   formElement: ".modal__form",
   inputSelector: ".modal__input",

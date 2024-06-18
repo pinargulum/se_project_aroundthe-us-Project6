@@ -24,4 +24,5 @@ export default class PopupWithForm extends Popup {
     });
     return inputValues;
   }
+  
 }

@@ -1,52 +1,79 @@
-class Api {
-    constructor(options) {
-      // constructor body
+
+export class Api {
+  constructor(baseUrl, headers) {
+    this.baseUrl = baseUrl;
+    this.headers = headers;
+  }
+  _checkResponse(response) {
+    if (response.ok) {
+      return response.json();
     }
-  
-    
-    getInitialCards() {
-        return fetch("https://around-api.en.tripleten-services.com/v1", {
-          headers: {
-            authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6"
-          }
-        })
-          .then(res => {
-            if (res.ok) {
-              return res.json();
-            }
-            // if the server returns an error, reject the promise
-            return Promise.reject(`Error: ${res.status}`);
-          });
-      }
-  
-      api.getInitialCards()
-      .then((result) => {
-        // process the result
-      })
-      .catch((err) => {
-        console.error(err); // log the error to the console
-      });
-    
-  
-  
-  const api = new Api({
-    baseUrl: "https://around-api.en.tripleten-services.com/v1",
-    headers: {
-      authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6",
-      "Content-Type": "application/json"
-    }
-  })
+    return Promise.reject(`Error ${response.status}`);
+  }
 
+  getInitialCards() {
+    return fetch(`${this.baseUrl}/cards`, {
+      headers: this.headers,
+    }).then(this._checkResponse);
+  }
+  getUserInfo() {
+    return fetch(`${this.baseUrl}/users/me`, {
+      headers: this.headers,
+    }).then(this._checkResponse);
+  }
 
+  renderCards() {
+    return Promise.all(this.getUserInfo(), this.getCardTamplate());
+  }
 
+  editProfile(name, about) {
+    return fetch(`${this.baseUrl}/users/me`, {
+      method: "PATCH",
+      headers: this.headers,
+      body: JSON.stringify({
+        name: name,
+        about: about,
+      }),
+    }).then(this._checkResponse);
+  }
+  addNewCard(name, link) {
+    return fetch(`${this.baseUrl}/cards`, {
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify({
+        name: name,
+        link: link,
+      }),
+    }).then(this._checkResponse);
+  }
+  deleteCard(cardId) {
+    return fetch(`${this.baseUrl}/cards/${cardId}`, {
+      method: "DELETE",
+      headers: this.headers,
+    }).then(this._checkResponse);
+  }
 
-/*{
-    "user": {
-        "name": "Placeholder name",
-        "about": "Placeholder description",
-        "avatar": "https://practicum-content.s3.amazonaws.com/resources/avatar_placeholder_1704989734.svg",
-        "_id": "1b6fc9245640fdf015abf277"
-    },
-    "token": "bbccb74d-3563-4793-a920-687f757d0d23"
+  addLike(data) {
+    return fetch(`${this.baseUrl}/cards/likes/${data}`, {
+      method: "PUT",
+      headers: this.headers,
+    }).then(this._checkResponse);
+  }
+  removeLike(data) {
+    return fetch(`${this.baseUrl}/cards/likes/${data}`, {
+      method: "DELETE",
+      headers: this.headers,
+    }).then(this._checkResponse);
+  }
+  updateProfilePicture(avatar) {
+    return fetch(`${this.baseUrl}/users/me/avatar`, {
+      method: "PATCH",
+      headers: this.headers,
+      body: JSON.stringify({
+        avatar: avatar,
+      }),
+    }).then(this._checkResponse);
+  }
 }
-*/
+
+// other methods for working with the API
