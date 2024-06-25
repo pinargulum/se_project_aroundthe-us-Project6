@@ -54,6 +54,10 @@
   border: none;
   
 }
+#delete-card-container {
+  width: 430px;
+  height: 181px;
+}
 .avatar__edit-button:hover {
   opacity: 0.5;
   cursor: pointer;

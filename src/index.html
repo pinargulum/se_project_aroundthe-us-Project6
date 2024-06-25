@@ -26,6 +26,7 @@
             src="<%= require('./images/jacques-cousteau.jpg')%>"
             alt="Avatar"
             class="profile__image"
+            
           />
           <button
             class="avatar__edit-button"
@@ -185,12 +186,11 @@
                 class="modal__input"
                 id="avatar-edit-input"
                 type="url"
-                name="avatar-picture"
-                minlength="2"
-                maxlength="40"
+                name="profile"
+                placeholder="Image URL"
                 required
               />
-              <span id="picture-edit-input-error"></span>
+              <span id="avatar-edit-input-error"></span>
             </label>
             <button
               class="modal__submit"
@@ -204,6 +204,7 @@
         </form>
       </div>
     </div>
+    </section>
     <!--Delete Card Modal-->
     <div class="modal" id="card-delete-modal">
       <div class="modal__container" id="delete-card-container">
@@ -213,13 +214,13 @@
           name="button"
           id="delete-card-close"
         ></button>
-        <h3 class="modal__title" id="delete-card-title">Are you sure?</h3>
-        <form class="modal__form" id="delete-card-form" name="delete-card-form">
+        <h3 class="modal__title" id="card-delete-title">Are you sure?</h3>
+        <form class="modal__form" id="card-delete-form" name="card-delete-form">
           <fieldset class="modal__fieldset">
             <button
               class="modal__submit"
               type="submit"
-              name="delete-yes"
+              name="button"
               id="delete-yes-button"
             >
               Yes

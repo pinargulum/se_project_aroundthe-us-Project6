@@ -1,4 +1,3 @@
-
 export class Api {
   constructor(options) {
     this.baseUrl = options.baseUrl;
@@ -65,8 +64,8 @@ export class Api {
       headers: this.headers,
     }).then(this._checkResponse);
   }
-  updateProfilePicture(avatar) {
-    return fetch(`${this.baseUrl}/users/me/avatar`, {
+  updateAvatar(avatar) {
+    return fetch("https://around-api.en.tripleten-services.com/v1/users/me/avatar", {
       method: "PATCH",
       headers: this.headers,
       body: JSON.stringify({

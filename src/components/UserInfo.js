@@ -1,3 +1,5 @@
+import { newAvatar } from "../Utility/Constant";
+
 export default class UserInfo {
   constructor(nameSelector, jobSelector, avatarSelector) {
     this._nameElement = document.querySelector(nameSelector);
@@ -16,8 +18,7 @@ export default class UserInfo {
     this._nameElement.textContent = title;
     this._jobElement.textContent = description;
   }
-  changeAvatarImage(avatarURL) {
-    this._avatarElement.src = avatarURL;
+  changeAvatarImage(avatar) {
+    this._avatarElement.src = avatar;
   }
-    
 }
