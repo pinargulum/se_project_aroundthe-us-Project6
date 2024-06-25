@@ -1,9 +1,17 @@
 class Card {
-  constructor(data, cardSelector, handleImageClick) {
+  constructor(
+    data,
+    cardSelector,
+    handleImageClick,
+    handlecardDeleteClick,
+    handleCardLike
+  ) {
     this._name = data.name;
     this._link = data.link;
     this._cardSelector = cardSelector;
     this._handleImageClick = handleImageClick;
+    this._handleCardDeleteClick = handlecardDeleteClick;
+    this._handleCardLikes = handleCardLike;
   }
   // Set Event Listeners
   _setEventListeners() {
@@ -23,14 +31,17 @@ class Card {
     });
 
     this._cardDeleteButton.addEventListener("click", () => {
-      this._cardElement.remove();
+      this._handleCardDeleteClick(this);
+      //this._cardElement.remove();
+      //this._cardElement = null;
+      
     });
+    
   }
-  
 
   _getCardTemplate() {
     this._cardTemplate = document.querySelector(this._cardSelector);
-    this._cardElement = this._cardTemplate .content
+    this._cardElement = this._cardTemplate.content
       .querySelector(".card")
       .cloneNode(true);
     return this._cardElement;

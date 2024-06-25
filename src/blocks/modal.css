@@ -35,6 +35,33 @@
   width: 100%;
   padding: 0;
 }
+#avatar-edit-container {
+  width: 430px;
+  height: 272px;
+}
+.avatar__edit-button {
+  background-image: url("../images/edit.svg");
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  width: 26px;
+  position: absolute;
+  left: 47px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  border: none;
+  
+}
+#delete-card-container {
+  width: 430px;
+  height: 181px;
+}
+.avatar__edit-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .modal__edit-close {
   position: absolute;
   width: 40px;

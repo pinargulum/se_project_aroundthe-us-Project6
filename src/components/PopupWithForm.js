@@ -24,4 +24,8 @@ export default class PopupWithForm extends Popup {
     });
     return inputValues;
   }
+  /*(callBack) {
+    this._handleFormSubmit = callBack;
+  }
+    */
 }

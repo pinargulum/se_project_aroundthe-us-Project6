@@ -1,4 +1,3 @@
-
 export const initialCards = [
   {
     name: "Yosemite Valley",
@@ -44,6 +43,18 @@ export const modalAddImageLinkInput =
 export const profileEditForm = document.forms["modal-edit-form"];
 export const profileAddForm = document.forms["modal-add-form"];
 export const profileAddModal = document.querySelector("#profile-add-modal");
+export const avatarEditButton = document.querySelector(".avatar__edit-button");
+export const profileSaveButton = document.querySelector("#modal-save-button");
+const cardTemplate = document
+  .querySelector("#cards-template")
+  .content.querySelector(".card");
+export const cardElement = cardTemplate.cloneNode(true);
+export const cardDeleteButton = cardElement.querySelector(
+  ".card__delete-button"
+);
+export const profilePicture = document.querySelector(".profile__image");
+export const newAvatar = document.querySelector("#avatar-edit-input");
+//export const avatarData = { avatar: newAvatar };
 export const config = {
   formElement: ".modal__form",
   inputSelector: ".modal__input",
